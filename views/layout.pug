@@ -1,0 +1,38 @@
+doctype html
+html(lang='en')
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+
+  body
+    header.header
+      nav(id='navbar', class='navbar navbar-expand-lg navbar-light bg-light')
+        ul.navbar-nav.mr-auto
+          li.nav-item
+            a(href='/catalog', class='nav-link') Home
+          li.nav-item
+            a(href='/catalog/books', class='nav-link') All books
+          li.nav-item
+            a(href='/catalog/authors', class='nav-link') All authors
+          li.nav-item
+            a(href='/catalog/genres', class='nav-link') All genres
+          li.nav-item
+            a(href='/catalog/bookinstances', class='nav-link') All book-instances
+
+    main(id='content')
+      block content
+
+    footer.footer
+      nav(class='navbar navbar-expand-lg navbar-dark bg-dark')
+        ul.navbar-nav.mr-auto
+          li.nav-item
+            a(href='/catalog/author/create', class='nav-link') Create Author
+          li.nav-item
+            a(href='/catalog/genre/create', class='nav-link') Create Genre
+          li.nav-item
+            a(href='/catalog/book/create', class='nav-link') Create Book
+          li.nav-item
+            a(href='/catalog/bookinstance/create', class='nav-link') Create Book Instance
